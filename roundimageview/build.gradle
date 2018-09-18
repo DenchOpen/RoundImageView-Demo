@@ -1,9 +1,26 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.1'
+    }
+}
+
+publish {
+    userOrg = 'denchopen' //注册Bintray的用户名
+    groupId='android.denchopen'//组ID
+    artifactId = 'roundimageview'//组件标示
+    publishVersion = '0.1.1'//版本
+    desc = 'Android ImageView 自定义显示圆角和圆形图片控件'
+    website = 'https://github.com/DenchOpen/RoundImageView-Demo'//如果有上传GitHub可以填写URL
+}
 
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 15

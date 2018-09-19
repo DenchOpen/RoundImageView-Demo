@@ -18,16 +18,12 @@ Then you can just use CircleImageView display circle pictures and RoundImageView
 
 ```xml
 <android.denchopen.roundimageview.CircleImageView
-    android:layout_width="120dp"
-    android:layout_height="120dp"
-    android:src="@drawable/beautiful"
+    ...
     app:border="1dp"
     app:border_color="@android:color/white" />
 
 <android.denchopen.roundimageview.RoundImageView
-    android:layout_width="match_parent"
-    android:layout_height="240dp"
-    android:src="@drawable/stone"
+    ...
     app:border="1dp"
     app:border_color="@android:color/holo_red_light"
     app:radius="15dp" />

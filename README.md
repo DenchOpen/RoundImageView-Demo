@@ -1,19 +1,42 @@
-License
--------
+## RoundImageView
 
-Copyright 2018 Dench Open.
+RoundImageView is a library that displays round corner picture and circle image for Android.
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
+![RoundImageViewDemo.jpg](demo001.jpg) 
 
-  http://www.apache.org/licenses/LICENSE-2.0
+## Getting started
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+As an jcenter library, you just need to add dependencies by adding the following lines to your `app/build.gradle`.
+
+```gradle
+dependencies {
+    implementation 'android.denchopen:roundimageview:{version}' // version could be update to the online lastest,current is 0.1.2
+}
+```
+
+```xml
+<android.denchopen.roundimageview.CircleImageView
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:src="@drawable/beautiful"
+    app:border="1dp"
+    app:border_color="@android:color/white" />
+
+<android.denchopen.roundimageview.RoundImageView
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:src="@drawable/stone"
+    app:border="1dp"
+    app:border_color="@android:color/holo_red_light"
+    app:radius="15dp" />
+```
+
+## Support
+Any problem?
+
+1. Learn more from [RoundImageView-Demo](https://github.com/DenchOpen/RoundImageView-Demo).
+2. Read the [source code](https://github.com/DenchOpen/RoundImageView-Demo/tree/master/roundimageview).
+3. Contact us for help.
+
+## License
+RoundImageView is under the Apache Software Foundation (ASF) License. See the [LICENSE](LICENSE) file for details.

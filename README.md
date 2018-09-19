@@ -14,6 +14,8 @@ dependencies {
 }
 ```
 
+Then you can just use CircleImageView display circle pictures and RoundImageView display round corner pictures.
+
 ```xml
 <android.denchopen.roundimageview.CircleImageView
     android:layout_width="120dp"

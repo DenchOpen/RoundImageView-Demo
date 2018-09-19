@@ -40,12 +40,12 @@ public class CircleImageView extends AppCompatImageView {
         borderColor = a.getColor(R.styleable.CircleImageView_border_color, Color.WHITE);
         a.recycle();
 
-        setupView();
+//        setupView();
     }
 
-    private void setupView() {
-        Log.i(TAG, String.format("setupView: border = %f, borderColor = %d", border, borderColor));
-    }
+//    private void setupView() {
+//        Log.i(TAG, String.format("setupView: border = %f, borderColor = %d", border, borderColor));
+//    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {

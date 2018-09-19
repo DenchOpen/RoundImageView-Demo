@@ -41,17 +41,15 @@ public class RoundImageView extends AppCompatImageView {
         borderColor = a.getColor(R.styleable.RoundImageView_border_color, Color.WHITE);
         a.recycle();
 
-        setupView();
+//        setupView();
     }
 
-    private void setupView() {
-        Log.i(TAG, String.format("setupView: radius = %f, border = %f, borderColor = %d", radius, border, borderColor));
-    }
+//    private void setupView() {
+//        Log.i(TAG, String.format("setupView: radius = %f, border = %f, borderColor = %d", radius, border, borderColor));
+//    }
 
     @Override
     protected void onDraw(Canvas canvas) {
-//        super.onDraw(canvas);
-
         int width = getWidth();
         int height = getHeight();
         if (border > 0) {
@@ -61,14 +59,16 @@ public class RoundImageView extends AppCompatImageView {
             canvas.drawRoundRect(new RectF(0, 0, width, height), radius, radius, borderPaint);
 
         }
+
         Drawable drawable = getDrawable();
         if (drawable == null) return;
         Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
         if (bitmap == null) return;
-        BitmapShader shader = new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.MIRROR);
+        BitmapShader shader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
         Matrix matrix = new Matrix();
-        float scale = Math.min(((float) width) / bitmap.getWidth(), ((float) height) / bitmap.getHeight());
-        matrix.setScale(scale, scale);
+        float scaleW = ((float) width) / bitmap.getWidth();
+        float scaleH =  ((float) height) / bitmap.getHeight();
+        matrix.setScale(scaleW, scaleH);
         shader.setLocalMatrix(matrix);
         Paint paint = new Paint();
         paint.setAntiAlias(true);

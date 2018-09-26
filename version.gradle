@@ -1,0 +1,5 @@
+// Define versions in a single place
+
+ext {
+    support_version = '27.1.1'
+}

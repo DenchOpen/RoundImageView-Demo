@@ -19,8 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:src="@drawable/beautiful"
-            app:border="1dp"
-            app:border_color="@android:color/white" />
+            app:border="1dp" />
 
         <android.denchopen.roundimageview.RoundImageView
             android:layout_width="match_parent"
